@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+.Wallet-header{
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+
+#balance-info{
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.wallet-container{
+    border: 2px solid red;
+    color: white;
+    border-radius: 10px;
+    width: 500px;
+    margin:auto auto;
+    background-color: #333;
+    text-align: center;
+}
+
+.wallet-action{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.wallet-action button[type="button"]:nth-child(1){
+    width:9rem;
+    margin: 10px;
+}
+
+button[type="button"],input[type="number"],input[type="password"]{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: #555;
+    text-align: center;
+    padding: 10px;
+}
+
+button[type="button"]:hover{
+ background: #777;
+cursor: pointer;
+}
+
+#submit-btn:hover{
+ background: #777;
+}
+
+.deposit-dropdown,.withdraw-dropdown{
+    border-radius: 5px;
+    color: white;
+    background:#444;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column ;
+    gap: 10px;
+    transition: 0.5s;
+}
+
+ .hidden{
+    display: none;
+    opacity: 0; 
+  transform: translateY(-20px); 
+}
+
+
+/* Styling Transaction-history */
+.transactions{
+flex-basis: 100%;
+margin: auto;
+text-align: center;
+padding: 10px;
+border-radius: 5px;
+overflow: auto;
+}
+
+#transaction-history{
+background:#444;
+border-radius: 5px;
+padding: 5px ;
+transition: 0.5s;
+} 
+
+#transaction-history li{
+background:#555;
+color: white;
+border-radius: 5px;
+margin: 5px;
+padding: 5px;
+list-style-position: inside;
+}
+
+/* Loader Style */
+#loader{
+border: 4px solid #f3f3f3;
+border-top: 4px solid #444;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+animation: spin 1s linear infinite;
+margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

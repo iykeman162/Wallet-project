@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="wallet-container">
+        <section class="Wallet-header">
+            <h1>MyWallet</h1>
+            <p id="balance-info">Wallet Balance: $22.00</p>
+        </section>
+        <section class="wallet-action">
+            <!-- Deposit Section -->
+            <section>
+                <button type="button" id="deposit-btn">Deposite</button>
+                <form class="hidden deposit-dropdown" id="deposit-form">
+                    <label for="deposit-amount">Deposit Amount</label>
+                    <input id="deposit-amount" type="number" placeholder="Enter amount to deposit">
+                    <button type="button" id="submit-deposit-btn">Confirm Deposite</button>
+                </form>
+            </section>
+            <!-- withdrawal section -->
+            <section>
+                <button type="button" id="Withdraw-btn">Withdraw</button>
+                <form class="hidden withdraw-dropdown" id="withdraw-form">
+                    <label for="withdraw-amount">Withdraw Amount</label>
+                    <input id="withdraw-amount" type="number" placeholder="Enter amount withdraw">
+                    <input type="password" id="password" required placeholder="Password">
+                    <button type="button" id="submit-withdrawal-btn">Confirm Withdraw</button>
+                </form>
+            </section>
+            <!-- Transaction History section -->
+            <section class="transactions">
+                <button type="button" id="t-HistoryBtn">Check Transaction</button>
+                <!-- Loader -->
+                <div id="loader"></div>
+                <ol class="hidden" id="transaction-history"></ol>
+            </section>
+        </section>
+    </div>
+
+</body>
+
+</html>
